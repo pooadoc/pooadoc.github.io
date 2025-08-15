@@ -49,6 +49,6 @@ nav:
     - Introdução: guias/index.md
     - JAVA JDK: guias/jdk.md
     - Tomcat: guias/tomcat.md
-    - Maven: guias/maven.md
-    - JUnit: guias/junit.md
+    - Maven: guias/tomcat.md
+    - JUnit: guias/tomcat.md
 
