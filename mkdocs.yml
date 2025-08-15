@@ -1,0 +1,9 @@
+site_name: "Programação — Documentação"
+site_url: "https://pooadoc.github.io/"
+theme:
+  name: material
+  language: pt-BR
+plugins:
+  - search
+nav:
+  - Início: index.md

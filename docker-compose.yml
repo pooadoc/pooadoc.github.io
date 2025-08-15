@@ -1,0 +1,10 @@
+services:
+  mkdocs:
+    image: squidfunk/mkdocs-material:latest
+    command: serve -a 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/docs
+    restart: unless-stopped
+
