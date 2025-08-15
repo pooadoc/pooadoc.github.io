@@ -1,9 +1,54 @@
-site_name: "Programação — Documentação"
+site_name: "POOA"
 site_url: "https://pooadoc.github.io/"
 theme:
   name: material
   language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
 plugins:
   - search
+  - privacy
+
+extra:
+  consent:
+    title: "Consentimento de cookies"
+    description: >-
+      Usamos cookies para lembrar suas preferências e medir a eficácia do
+      material. Com o seu consentimento, ajudará a tornar nossa documentação
+      melhor.
+    # quais botões mostrar (ordem importa)
+    actions:
+      - accept
+      - reject
+      - manage
+    cookies:
+      analytics:
+        name: "Métricas (Google Analytics)"
+        checked: false     # começa desativado
+      github:
+        name: "Integração GitHub (estrelas/releases)"
+        checked: true
+
+copyright: >
+  © 2025 POOA — <a href="#__consent">cookies</a>
+
+
 nav:
   - Início: index.md
+  - SOLID: solid/index.md
+  - GOF: gof/index.md
+  - Guias: 
+    - Introdução: guias/index.md
+    - JAVA JDK: guias/jdk.md
+    - Tomcat: guias/tomcat.md
+    - Maven: guias/maven.md
+    - JUnit: guias/junit.md
+
