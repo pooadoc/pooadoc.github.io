@@ -1,11 +1,15 @@
 site_name: "POOA"
 site_url: "https://pooadoc.github.io/"
+repo_url: https://github.com/pooadoc/pooadoc.github.io
+repo_name: pooadoc.github.io
+edit_uri: edit/main/docs/
 theme:
   name: material
   language: pt-BR
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.footer
     - navigation.instant
     - toc.integrate
     - search.suggest
@@ -16,8 +20,22 @@ theme:
 plugins:
   - search
   - privacy
+  - social
+  # - optimize
+  #- git-revision-date-localized:
+  #    locale: pt_BR
+  #    fallback_to_build_date: true
+  #- git-authors
+  - minify
+  #- awesome-pages
+  #- mermaid2
+  #- glightbox
 
 extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/pooadoc/pooadoc.github.io
+      name: GitHub
   consent:
     title: "Consentimento de cookies"
     description: >-
@@ -37,15 +55,20 @@ extra:
         name: "Integração GitHub (estrelas/releases)"
         checked: true
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
 copyright: >
   © 2025 POOA — <a href="#__consent">cookies</a>
 
 
 nav:
-  - Início: index.md
+  - INÍCIO: index.md
   - SOLID: solid/index.md
   - GOF: gof/index.md
-  - Guias: 
+  - GUIAS: 
     - Introdução: guias/index.md
     - JAVA JDK: guias/jdk.md
     - Tomcat: guias/tomcat.md
