@@ -10,6 +10,15 @@ Exemplo:
 
 Usando log fixo, alta dependência.
 
+```mermaid
+%% Log fixo e acoplamento direto
+classDiagram
+    class DoClass {
+        +do(atributo)
+    }
+    DoClass : do() --> System.out.println
+```
+
 ```java
 public class DoClass {
     public void do(String atributo){
@@ -20,6 +29,20 @@ public class DoClass {
 ```
 
 Mesmo criando uma classe Log para "separar a responsabilidade" ainda vamos ter um forte acoplamento.
+
+```mermaid
+%% Acoplamento via classe Log
+classDiagram
+    class Log {
+        +escrever(mensagem)
+    }
+    class DoClass {
+        -Log log
+        +do(atributo)
+    }
+    DoClass --> Log
+    Log : escrever() --> System.out.println
+```
 
 ```java
 public class Log {
@@ -40,11 +63,47 @@ public class DoClass {
 
 Neste caso, o método está diretamente acoplado ao console. Se quiser mudar para arquivo ou banco, precisa alterar a classe.
 
+
+```mermaid
+%% Depois: aplicando DIP
+classDiagram
+    class Logger {
+        <<interface>>
+        +escrever(mensagem)
+    }
+    class Logging {
+        <<interface>>
+        +log(mensagem)
+    }
+    class ConsoleLogger {
+        +escrever(mensagem)
+    }
+    class Log {
+        -Logger logger
+        +log(mensagem)
+    }
+    class DoClass {
+        -Logging logging
+        +do(atributo)
+    }
+
+    Logger <|.. ConsoleLogger
+    Logging <|.. Log
+    Log --> Logger
+    DoClass --> Logging
+```
+
 ```java
 // Interface de abstração
 public interface Logger {
     void escrever(String mensagem);
 }
+
+// Interface de abstração
+public interface Logging {
+    void log(String mensagem);
+}
+
 
 // Implementação para console
 public class ConsoleLogger implements Logger {
@@ -53,29 +112,44 @@ public class ConsoleLogger implements Logger {
     }
 }
 
+
+
 // Classe Log depende da abstração
-public class Log {
+public class Log implements Logging{
     private Logger logger;
 
     public Log(Logger logger){
         this.logger = logger;
     }
 
-    public void escreva(String mensagem){
-        logger.salvar(mensagem);
+    public void escrever(String mensagem){
+        logger.log(mensagem);
     }
 }
 
 public class DoClass {
-    private final Log log;
+    private final Logging logging;
 
-    public DoClass(Logger logger){
-        log = logger;
+    public DoClass(Logging logging){
+        logging = logging;
     }
 
     public void do(String atributo){
-        log.escrever(atributo);
+        logging.log(atributo);
         //regra de negocio.
+    }
+}
+
+public class Console {
+    public static void main(String args[]){
+        // Cria o logger concreto
+        Logger logger = new ConsoleLogger();
+        // Cria o Log, que depende de Logger
+        Logging log = new Log(logger);
+        // Cria a classe de negócio, que depende de Logging
+        DoClass doClass = new DoClass(log);
+        // Executa a ação, que faz o log
+        doClass.do("Minha mensagem de log");
     }
 }
 ```
