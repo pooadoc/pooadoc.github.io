@@ -1,6 +1,5 @@
 ---
-title: Built-in typeset plugin
-icon: material/format-title
+title: Padrões de Projeto - GoF
 ---
 
 # GOF
@@ -8,7 +7,7 @@ icon: material/format-title
 
 ---
 
-!!! question "Missing something?"
+!!! note "Missing something?"
 
     When setting up your blog or migrating from another blog framework, you
     might discover that you're missing specific functionality – we're happy to
