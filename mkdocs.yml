@@ -58,6 +58,10 @@ extra:
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
   - pymdownx.superfences
 
 copyright: >
@@ -66,10 +70,16 @@ copyright: >
 
 nav:
   - INÍCIO: index.md
-  - SOLID: solid/index.md
+  - SOLID:
+      - solid/index.md
+      - SRP: solid/srp.md
+      - OCP: solid/ocp.md
+      - LSP: solid/lsp.md
+      - ISP: solid/isp.md
+      - DIP: solid/dip.md
   - GOF: gof/index.md
   - GUIAS: 
-    - Introdução: guias/index.md
+    - guias/index.md
     - JAVA JDK: guias/jdk.md
     - Tomcat: guias/tomcat.md
     - Maven: guias/tomcat.md

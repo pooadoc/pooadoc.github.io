@@ -1,8 +1,6 @@
 ---
-title: SOLID
+title: Visão Geral
 ---
-
-**Visão Geral**
 
 Os princípios **SOLID** tem como objetivo maximizar a coesão e minimizar o acoplamento. Quando isso é aplicado a evelução do software fica facilitada.
 
@@ -19,7 +17,7 @@ Os princípios **SOLID** tem como objetivo maximizar a coesão e minimizar o aco
 - [ISP — Interface Segregation Principle](isp.md)
 - [DIP — Dependency Inversion Principle](dip.md)
 
-### Sugestões de livros
+## Sugestões de livros
 
 "Clean Code: A Handbook of Agile Software Craftsmanship" de Robert C. Martin: Aborda boas práticas de codificação e é um complemento natural para os princípios SOLID.
 
