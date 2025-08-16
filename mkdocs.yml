@@ -1,4 +1,5 @@
 site_name: "POOA"
+site_description: "Disciplina POOA (UCSAL): SOLID, GoF, Threads, JDBC, Reflexão e Anotações."
 site_url: "https://pooadoc.github.io/"
 repo_url: https://github.com/pooadoc/pooadoc.github.io
 repo_name: pooadoc.github.io
