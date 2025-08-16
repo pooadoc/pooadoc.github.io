@@ -91,6 +91,7 @@ classDiagram
     Logging <|.. Log
     Log --> Logger
     DoClass --> Logging
+
 ```
 
 ```java
