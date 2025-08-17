@@ -3,8 +3,8 @@ title: Open/Closed Principle
 ---
 
 
-!!! note Princípio do Aberto/Fechado (OCP)
-"Entidades de software devem ser abertas para extensão mas fechadas para modificação." - Martin, Robert C.
+!!! note "Princípio do Aberto/Fechado (OCP)"
+    "Entidades de software devem ser abertas para extensão mas fechadas para modificação". - Martin, Robert C.
 
 Estender o comportamento com código novo, sem alterar o existente.
 
@@ -52,17 +52,17 @@ Explicação do código
 
 - Classe Arquivo
 
-    Possui métodos para converter o arquivo para DOCX e PDF. O tipo do arquivo é definido por uma string.
+  - Possui métodos para converter o arquivo para DOCX e PDF. O tipo do arquivo é definido por uma string.
+
+
 - Classe GeradorDeArquivos
 
-    Percorre uma lista de arquivos e, dependendo do tipo (getTipo()), chama o método de conversão correspondente. O tipo é verificado com if ("DOCX".equals(arquivo.getTipo())) e else if ("DOCX".equals(arquivo.getTipo())) (há um erro: ambos verificam "DOCX", deveria ser "PDF" no segundo caso).
-- Para suportar um novo tipo de arquivo (ex: TXT, HTML), você teria que modificar a classe 
-- Arquivo para adicionar novos métodos e também alterar o método gerarArquivos em GeradorDeArquivos para incluir novos if/else.
-- Isso significa que o código não está fechado para modificação: toda vez que um novo formato é necessário, o código existente precisa ser alterado.
+  - Percorre uma lista de arquivos e, dependendo do tipo (getTipo()), chama o método de conversão correspondente. O tipo é verificado com if ("DOCX".equals(arquivo.getTipo())) e else if ("DOCX".equals(arquivo.getTipo())) (há um erro: ambos verificam "DOCX", deveria ser "PDF" no segundo caso).
+  - Para suportar um novo tipo de arquivo (ex: TXT, HTML), você teria que modificar a classe
+  - Arquivo para adicionar novos métodos e também alterar o método gerarArquivos em GeradorDeArquivos para incluir novos if/else.
+  - Isso significa que o código não está fechado para modificação: toda vez que um novo formato é necessário, o código existente precisa ser alterado.
 
-
-
-**Solução**
+## Solução
 
 O correto seria usar abstração (interfaces ou herança), permitindo adicionar novos tipos sem modificar as classes existentes.
 
