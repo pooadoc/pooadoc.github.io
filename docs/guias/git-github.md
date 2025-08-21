@@ -64,7 +64,7 @@ git pull                # baixa alterações do GitHub
 
 1. O professor envia o **link da atividade**.
 2. O aluno clica e o GitHub cria um repositório pessoal com a atividade.
-3. O aluno clona o repositório para sua máquina:
+3. O aluno clona o repositório para sua máquina (Não Baixar como ZIP):
 
 ```bash
 git clone https://github.com/pooadoc/atividade-xyz.git

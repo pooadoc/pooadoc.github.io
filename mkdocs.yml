@@ -86,8 +86,9 @@ nav:
   - GOF: gof/index.md
   - GUIAS: 
     - guias/index.md
+    - GIT GITHUB: guias/git-github.md
     - JAVA JDK: guias/jdk.md
     - Tomcat: guias/tomcat.md
-    - Maven: guias/tomcat.md
-    - JUnit: guias/tomcat.md
+#    - Maven: guias/tomcat.md
+#    - JUnit: guias/tomcat.md
 
