@@ -36,7 +36,18 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/pooadoc/pooadoc.github.io
-      name: GitHub
+      name: GitHub Site
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/mariojpereira/
+      name: LinkedIn
+    - icon: simple/orcid
+      link: https://orcid.org/0009-0003-2882-6728
+      name: ORCID
+    - icon: fontawesome/brands/github
+      link: https://github.com/mariojp
+      name: GitHub Pessoal
+
+
   consent:
     title: "Consentimento de cookies"
     description: >-
