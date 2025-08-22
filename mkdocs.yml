@@ -49,12 +49,16 @@ extra:
       - reject
       - manage
     cookies:
-      #analytics:
-      #  name: "Métricas (Google Analytics)"
-      #  checked: false     # começa desativado
+      analytics:
+        name: "Métricas (Google Analytics)"
+        checked: false     # começa desativado
       github:
         name: "Integração GitHub (estrelas/releases)"
         checked: true
+  analytics:
+    provider: google
+    property: G-3LD8DRX1HZ   # substitua pelo seu ID de medição do Google Analytics
+
 
 markdown_extensions:
   - admonition
@@ -91,4 +95,3 @@ nav:
     - Tomcat: guias/tomcat.md
 #    - Maven: guias/tomcat.md
 #    - JUnit: guias/tomcat.md
-
