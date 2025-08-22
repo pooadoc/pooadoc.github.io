@@ -51,7 +51,7 @@ extra:
     cookies:
       analytics:
         name: "Métricas (Google Analytics)"
-        checked: false     # começa desativado
+        checked: true     # começa desativado
       github:
         name: "Integração GitHub (estrelas/releases)"
         checked: true
