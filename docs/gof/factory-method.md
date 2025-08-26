@@ -26,7 +26,7 @@ title: Factory Method
 ## Estrutura UML (Mermaid)
 
 ```mermaid
-classDiagram-v2
+classDiagram
 direction LR
   class Creator {
     +getShape(): Shape
