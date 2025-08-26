@@ -17,6 +17,8 @@ theme:
     - search.highlight
     - content.code.copy
     - content.tabs.link
+    - diagrams # <- ativa suporte mais amplo
+
 
 plugins:
   - search

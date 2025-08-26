@@ -26,8 +26,8 @@ title: Factory Method
 ## Estrutura UML (Mermaid)
 
 ```mermaid
-classDiagram
-
+classDiagram-v2
+direction LR
   class Creator {
     +getShape(): Shape
   }
@@ -49,3 +49,5 @@ classDiagram
   Shape <|-- Circle
   ShapeFactory ..> Shape : cria
   CircleFactory ..> Circle : cria
+```
+
