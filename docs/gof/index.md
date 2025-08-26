@@ -8,7 +8,7 @@ title: Padrões de Projeto - GoF
 - Apresentar os **23 padrões clássicos GoF** (Gang of Four).
 - Entender **o problema que solucionam**, a **solução proposta**, diagramas UML e exemplos em Java.
 - Refletir sobre **aplicações típicas** e boas práticas em orientação a objetos.
-- Explorar também **padrões GRASP** e padrões emergentes como **Injeção de Dependência** e **Aspectos**:contentReference[oaicite:5]{index=5}.
+- Explorar também **padrões GRASP** e padrões emergentes como **Injeção de Dependência** e **Aspectos**.
 
 ---
 
@@ -27,7 +27,7 @@ title: Padrões de Projeto - GoF
 - **Vocabulário comum**: facilita comunicação e documentação.  
 - **Reduz complexidade**: permite falar em alto nível de abstração.  
 - **Boas práticas em OO**: reutilização, eficiência, alta coesão e baixo acoplamento.  
-- **Ajuda na aprendizagem**: padrões tornam sistemas existentes mais fáceis de entender:contentReference[oaicite:7]{index=7}.
+- **Ajuda na aprendizagem**: padrões tornam sistemas existentes mais fáceis de entender.
 
 ---
 
@@ -38,7 +38,7 @@ Todo padrão segue uma estrutura:
 - **Nome**: termo que identifica o padrão.
 - **Problema**: quando aplicá-lo, em que condições.
 - **Solução**: arranjo de classes/objetos que resolve o problema.
-- **Consequências**: impactos positivos/negativos, custos, flexibilidade e eficiência:contentReference[oaicite:8]{index=8}.
+- **Consequências**: impactos positivos/negativos, custos, flexibilidade e eficiência.
 
 ---
 
@@ -47,7 +47,7 @@ Todo padrão segue uma estrutura:
 - Publicado em **1994** por **Erich Gamma, Richard Helm, Ralph Johnson e John Vlissides**.  
 - Catálogo de **23 padrões de projeto** para OO.  
 - Tornou-se um clássico e continua atual.  
-- Os autores ficaram conhecidos como **Gang of Four (GoF)**:contentReference[oaicite:9]{index=9}.
+- Os autores ficaram conhecidos como **Gang of Four (GoF)
 
 ---
 
@@ -63,7 +63,7 @@ Os padrões são classificados **por propósito** e **por escopo**:
 | **Estrutura**    | Class Adapter        | Object Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy |
 | **Comportamento**| Template Method      | Interpreter, Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Visitor |
 
-Fonte: Gamma et al., *Design Patterns (1994)*:contentReference[oaicite:10]{index=10}.
+Fonte: Gamma et al., *Design Patterns (1994)
 
 ---
 
