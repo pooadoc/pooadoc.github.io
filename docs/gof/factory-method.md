@@ -27,7 +27,6 @@ title: Factory Method
 
 ```mermaid
 classDiagram
-direction LR
 
   class Creator {
     +getShape(): Shape
