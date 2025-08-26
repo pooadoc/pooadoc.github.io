@@ -1,0 +1,3 @@
+---
+title: Abstract Factory
+---
