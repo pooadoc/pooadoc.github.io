@@ -123,8 +123,8 @@ public class Log implements Logging{
         this.logger = logger;
     }
 
-    public void escrever(String mensagem){
-        logger.log(mensagem);
+    public void log(String mensagem){
+        logger.escrever(mensagem);
     }
 }
 
