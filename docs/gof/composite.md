@@ -11,6 +11,8 @@ Você precisa manipular elementos simples (folhas) e grupos de elementos (compó
 
 Criar um menu com submenus e itens de menu.
 
+## MOdelo
+
 ```mermaid
   classDiagram
   direction LR
@@ -24,7 +26,10 @@ Criar um menu com submenus e itens de menu.
   Menu o-- MenuItem
   Menu o-- SubMenu
   SubMenu o-- MenuItem
-````
+```
+
+## Codigo fonte:
+
 
 ```java
 public class MenuItem {
