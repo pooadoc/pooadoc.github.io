@@ -4,6 +4,31 @@ title: Composite
 
 > **Definição (GoF):** “**Composite** compõe objetos em estruturas de árvore para representar hierarquias **parte–todo**. Composite permite que clientes tratem objetos individuais e composições de objetos **de maneira uniforme**."
 
+```mermaid
+  classDiagram
+  direction LR
+
+  class Component {
+    <<interface>>
+    +operation(): any
+  }
+
+  class Leaf {
+    +operation(): any
+  }
+
+  class Composite {
+    -children: List~Component~
+    +add(Component)
+    +remove(Component)
+    +operation(): any
+  }
+
+  Component <|.. Leaf
+  Component <|.. Composite
+  Composite o-- Component : children
+
+```
 
 ## Problema
 
@@ -28,7 +53,7 @@ Criar um menu com submenus e itens de menu.
   SubMenu o-- MenuItem
 ```
 
-## Codigo fonte:
+## Codigo Fonte:
 
 
 ```java
@@ -127,31 +152,7 @@ public class Cliente {
 
 ## Solução
 
-```mermaid
-  classDiagram
-  direction LR
 
-  class Component {
-    <<interface>>
-    +operation(): any
-  }
-
-  class Leaf {
-    +operation(): any
-  }
-
-  class Composite {
-    -children: List~Component~
-    +add(Component)
-    +remove(Component)
-    +operation(): any
-  }
-
-  Component <|.. Leaf
-  Component <|.. Composite
-  Composite o-- Component : children
-
-```
 
 ```mermaid
 classDiagram
