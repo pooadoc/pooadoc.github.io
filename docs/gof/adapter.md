@@ -125,6 +125,8 @@ title: Adapter
   ViaCepService --> EnderecoViaCep
 ```
 
+
+
 ## Solução
 
 ```mermaid
