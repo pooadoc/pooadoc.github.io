@@ -71,6 +71,9 @@ Fonte: Gamma et al., *Design Patterns (1994)
 
 - [Factory Method](factory-method.md)
 - [Abstract Factory](abstract-factory.md)
+
+- [Adapter](adapter.md)
+- [Composite](composite.md)
 - (Outros padrões podem ser adicionados conforme avançarmos no curso.)
 
 ---
