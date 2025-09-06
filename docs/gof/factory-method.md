@@ -23,7 +23,7 @@ title: Factory Method
 
 ---
 
-## Estrutura UML (Mermaid)
+## Estrutura UML
 
 ```mermaid
 classDiagram
