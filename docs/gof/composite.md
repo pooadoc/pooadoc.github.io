@@ -1,5 +1,5 @@
 ---
-title: Adapter
+title: Composite
 ---
 
 > **Definição (GoF):** “**Composite** compõe objetos em estruturas de árvore para representar hierarquias **parte–todo**. Composite permite que clientes tratem objetos individuais e composições de objetos **de maneira uniforme**."
