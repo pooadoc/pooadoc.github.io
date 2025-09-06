@@ -11,7 +11,7 @@ Você precisa manipular elementos simples (folhas) e grupos de elementos (compó
 
 Criar um menu com submenus e itens de menu.
 
-## MOdelo
+## Modelo
 
 ```mermaid
   classDiagram
