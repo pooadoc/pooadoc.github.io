@@ -24,6 +24,7 @@ Criar um menu com submenus e itens de menu.
   Menu o-- MenuItem
   Menu o-- SubMenu
   SubMenu o-- MenuItem
+````
 
 ```java
 public class MenuItem {
