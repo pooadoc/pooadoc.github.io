@@ -26,6 +26,34 @@ title: Adapter
   }
 ```
 
+```java
+
+public class Cliente {
+    private final Alvo alvo;
+
+    public Cliente(Alvo a) {
+        this.alvo = a;
+    }
+
+    public void executar() {
+        // o cliente só conhece a INTERFACE Alvo
+        alvo.metodo();
+    }
+}
+
+
+public interface Alvo {
+    void metodo();
+}
+
+public class CodigoExistente {
+    public void metodoUtil() {
+        System.out.println("[CodigoExistente] fazendo o trabalho útil...");
+    }
+}
+
+```
+
 - Como **reusar** o código existente (legado/terceiros) **sem alterar** seu contrato, nem quebrar o cliente?
 
 ## Solução (visões GoF)
@@ -60,6 +88,22 @@ title: Adapter
   CodigoExistente <|--  ClasseAdapter : herda
 ```
 
+
+```java
+// Implementa Alvo (Target) e HERDA CodigoExistente (Adaptee)
+public class AdaptadorClasse extends CodigoExistente implements Alvo {
+    @Override
+    public void metodo() {
+        // traduz a chamada esperada pelo cliente → para o método do adaptee
+        super.metodoUtil();
+    }
+}
+```
+
+
+
+
+
 ## Object Adapter
 
 ```mermaid
@@ -85,6 +129,46 @@ title: Adapter
   note for ObjectAdapter "metodo(){ this.codigoExistente.metodoUtil()}"
   ObjectAdapter ..|> Alvo : implementa
   CodigoExistente --*  ObjectAdapter : tem
+```
+
+```java
+
+// Implementa Alvo (Target) e COMPÕE CodigoExistente (Adaptee)
+public class AdaptadorObjeto implements Alvo {
+    private final CodigoExistente adaptee;
+
+    public AdaptadorObjeto(CodigoExistente adaptee) {
+        this.adaptee = adaptee;
+    }
+
+    @Override
+    public void metodo() {
+        // delega/traduz para o adaptee
+        adaptee.metodoUtil();
+    }
+}
+
+```
+
+
+```java
+
+public class Demo {
+    public static void main(String[] args) {
+
+        // Usando o CLASS ADAPTER (herança)
+        Alvo a1 = new AdaptadorClasse();
+        Cliente cliente1 = new Cliente(a1);
+        cliente1.executar();
+
+        // Usando o OBJECT ADAPTER (composição)
+        Alvo a2 = new AdaptadorObjeto(new CodigoExistente());
+        Cliente cliente2 = new Cliente(a2);
+        cliente2.executar();
+    }
+}
+
+
 ```
 
 ---
@@ -125,6 +209,43 @@ title: Adapter
   ViaCepService --> EnderecoViaCep
 ```
 
+```java
+
+public class CepControler {
+    private final ServicoCep servico;
+
+    public Cliente(ServicoCep servico) {
+        this.servico = servico;
+    }
+
+    public Endereco executar() {
+        // o cliente só conhece a INTERFACE Alvo
+        return servico.obterEndereco(41740090);
+    }
+}
+
+public interface ServicoCep {
+    Endereco obterEndereco(String cep);
+}
+
+public interface Endereco {
+    public String getLogradouro();
+}
+
+public class ViaCepService {
+    public ViaCepEndereco lookup(String cep() {
+        System.out.println("codigo para Obter Cep");
+    }
+}
+
+public class ViaCepEndereco { 
+    //dados de Endereco
+    public String getRua(){
+
+    }
+}
+
+```
 
 
 ## Solução
@@ -178,5 +299,27 @@ title: Adapter
    
   }
   ViaCepService --> EnderecoViaCep
+
+```
+
+```java
+
+public class ViaCepAdapter extends ViaCepService implements ServicoCep {
+    @Override
+    public Endereco obterEndereco(String cep) { 
+        return new EnderecoAdapter(lookup(cep));
+    }
+}
+
+public class EnderecoAdapter implements Endereco {
+    private EnderecoViaCep enderecoViaCep;
+    public EnderecoAdapter(EnderecoViaCep enderecoViaCep) {
+        this.enderecoViaCep = enderecoViaCep;
+    }
+    public String getLogradouro() {
+        return enderecoViaCep.getLogradouro();
+    }
+}
+
 
 ```
