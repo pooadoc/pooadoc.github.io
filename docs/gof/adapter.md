@@ -269,7 +269,6 @@ public class ViaCepEndereco {
   } 
 
  class CepServiceAdapter {
-    -viaCepService : ViaCepService
     +obterEndereco(String cep) Endereco
   }
   class EnderecoAdapter{
@@ -304,7 +303,7 @@ public class ViaCepEndereco {
 
 ```java
 
-public class ViaCepAdapter extends ViaCepService implements ServicoCep {
+public class CepServiceAdapter extends ViaCepService implements ServicoCep {
     @Override
     public Endereco obterEndereco(String cep) { 
         return new EnderecoAdapter(lookup(cep));
