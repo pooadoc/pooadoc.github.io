@@ -333,24 +333,26 @@ title: Adapter
 !!! note "Codigo Fonte"
 
     === "ViaCepAdapter.java"
-    ```java
-    public class ViaCepAdapter extends ViaCepService implements ServicoCep {
-        @Override
-        public Endereco obterEndereco(String cep) { 
-            return new EnderecoAdapter(lookup(cep));
-        }
-    }
-    ```
+
+      ```java
+      public class ViaCepAdapter extends ViaCepService implements ServicoCep {
+          @Override
+          public Endereco obterEndereco(String cep) { 
+              return new EnderecoAdapter(lookup(cep));
+          }
+      }
+      ```
 
     === "EnderecoAdapter.java"
-    ```java
-    public class EnderecoAdapter implements Endereco {
-        private EnderecoViaCep enderecoViaCep;
-        public EnderecoAdapter(EnderecoViaCep enderecoViaCep) {
-            this.enderecoViaCep = enderecoViaCep;
-        }
-        public String getLogradouro() {
-            return enderecoViaCep.getLogradouro();
-        }
-    }
-    ```
+
+      ```java
+      public class EnderecoAdapter implements Endereco {
+          private EnderecoViaCep enderecoViaCep;
+          public EnderecoAdapter(EnderecoViaCep enderecoViaCep) {
+              this.enderecoViaCep = enderecoViaCep;
+          }
+          public String getLogradouro() {
+              return enderecoViaCep.getLogradouro();
+          }
+      }
+      ```
