@@ -223,7 +223,7 @@ title: Adapter
   ViaCepService --> EnderecoViaCep
 ```
 
-!!! note "Codigo Fonte Adapter Problema"
+!!! note "Codigo Fonte"
 
     ==="CepControler.java"
 
@@ -331,24 +331,25 @@ title: Adapter
 
 ```
 
-```java
-
-public class ViaCepAdapter extends ViaCepService implements ServicoCep {
-    @Override
-    public Endereco obterEndereco(String cep) { 
-        return new EnderecoAdapter(lookup(cep));
+!!! note "Codigo Fonte"
+    === "ViaCepAdapter.java"
+    ```java
+    public class ViaCepAdapter extends ViaCepService implements ServicoCep {
+        @Override
+        public Endereco obterEndereco(String cep) { 
+            return new EnderecoAdapter(lookup(cep));
+        }
     }
-}
-
-public class EnderecoAdapter implements Endereco {
-    private EnderecoViaCep enderecoViaCep;
-    public EnderecoAdapter(EnderecoViaCep enderecoViaCep) {
-        this.enderecoViaCep = enderecoViaCep;
+    ```
+    === "ViaCepAdapter.java"
+    ```java
+    public class EnderecoAdapter implements Endereco {
+        private EnderecoViaCep enderecoViaCep;
+        public EnderecoAdapter(EnderecoViaCep enderecoViaCep) {
+            this.enderecoViaCep = enderecoViaCep;
+        }
+        public String getLogradouro() {
+            return enderecoViaCep.getLogradouro();
+        }
     }
-    public String getLogradouro() {
-        return enderecoViaCep.getLogradouro();
-    }
-}
-
-
-```
+    ```
