@@ -4,8 +4,8 @@ title: Adapter
 
 > **Definição (GoF):** “Converter a interface de uma classe em outra interface esperada pelos clientes. **Adapter** permite a comunicação entre classes que não poderiam trabalhar juntas devido à incompatibilidade de suas interfaces.”
 
-
 ## Problema
+
 - O **cliente** espera uma **interface-alvo** (Target), mas a implementação disponível expõe uma interface **incompatível** (Adaptee).
 
 ```mermaid
@@ -66,10 +66,10 @@ title: Adapter
 - Como **reusar** o código existente (legado/terceiros) **sem alterar** seu contrato, nem quebrar o cliente?
 
 ## Solução (visões GoF)
+
 - **Class Adapter** (herança): o adaptador **implementa** `Target` e **herda** de `Adaptee` (em Java, viável quando `Target` é **interface**).
 
 - **Object Adapter** (composição): o adaptador **implementa** `Target` e **compõe** um `Adaptee`, **delegando** chamadas (opção mais flexível/testável).
-
 
 ## Class Adapter
 
@@ -112,10 +112,6 @@ title: Adapter
     }
     ```
 
-
-
-
-
 ## Object Adapter
 
 ```mermaid
@@ -143,8 +139,6 @@ title: Adapter
   CodigoExistente --*  ObjectAdapter : tem
 ```
 
-
-
 !!! note "Codigo Fonte Adaptador Objeto"
     === "AdaptadorObjeto.java"
         ```java
@@ -164,7 +158,6 @@ title: Adapter
         }
 
         ```
-
 
 !!! note "Codigo Fonte"
     === "Demo.java"
@@ -226,6 +219,7 @@ title: Adapter
 !!! note "Codigo Fonte"
 
     === "CepControler.java"
+
         ```java
         public class CepControler {
             private final ServicoCep servico;
@@ -274,7 +268,6 @@ title: Adapter
             }
         }
         ```
-
 
 ## Solução
 
@@ -334,25 +327,25 @@ title: Adapter
 
     === "ViaCepAdapter.java"
 
-      ```java
-      public class ViaCepAdapter extends ViaCepService implements ServicoCep {
-          @Override
-          public Endereco obterEndereco(String cep) { 
-              return new EnderecoAdapter(lookup(cep));
-          }
-      }
-      ```
-
+        ```java
+        public class ViaCepAdapter extends ViaCepService implements ServicoCep {
+            @Override
+            public Endereco obterEndereco(String cep) { 
+                return new EnderecoAdapter(lookup(cep));
+            }
+        }
+        ```
+    
     === "EnderecoAdapter.java"
 
-      ```java
-      public class EnderecoAdapter implements Endereco {
-          private EnderecoViaCep enderecoViaCep;
-          public EnderecoAdapter(EnderecoViaCep enderecoViaCep) {
-              this.enderecoViaCep = enderecoViaCep;
-          }
-          public String getLogradouro() {
-              return enderecoViaCep.getLogradouro();
-          }
-      }
-      ```
+        ```java
+        public class EnderecoAdapter implements Endereco {
+            private EnderecoViaCep enderecoViaCep;
+            public EnderecoAdapter(EnderecoViaCep enderecoViaCep) {
+                this.enderecoViaCep = enderecoViaCep;
+            }
+            public String getLogradouro() {
+                return enderecoViaCep.getLogradouro();
+            }
+        }
+        ```
