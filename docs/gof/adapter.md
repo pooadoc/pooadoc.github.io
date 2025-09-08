@@ -230,7 +230,8 @@ title: Adapter
 
 !!! "Codigo Fonte"
 
-    === "CepControler.java"
+    ==="CepControler.java"
+
     ```java
         public class CepControler {
             private final ServicoCep servico;
@@ -243,19 +244,24 @@ title: Adapter
             }
         }
     ```
+
     === "ServicoCep.java"
+
     ```java
     public interface ServicoCep {
         Endereco obterEndereco(String cep);
     }
     ```
+
     === "Endereco.java"
+
     ```java
     public interface Endereco {
         public String getLogradouro();
     }
     ```
     === "ViaCepService.java"
+
         ```java
         public class ViaCepService {
             public ViaCepEndereco lookup(String cep) {
@@ -263,7 +269,9 @@ title: Adapter
             }
         }
         ```
+
     === "ViaCepEndereco.java"
+
         ```java
         public class ViaCepEndereco {
             //dados de Endereco
@@ -271,6 +279,7 @@ title: Adapter
             }
         }
         ```
+
 
 ## Solução
 
