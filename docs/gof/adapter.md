@@ -298,7 +298,6 @@ title: Adapter
   } 
 
  class CepServiceAdapter {
-    -viaCepService : ViaCepService
     +obterEndereco(String cep) Endereco
   }
   class EnderecoAdapter{
@@ -333,7 +332,7 @@ title: Adapter
 
 ```java
 
-public class ViaCepAdapter extends ViaCepService implements ServicoCep {
+public class CepServiceAdapter extends ViaCepService implements ServicoCep {
     @Override
     public Endereco obterEndereco(String cep) { 
         return new EnderecoAdapter(lookup(cep));
