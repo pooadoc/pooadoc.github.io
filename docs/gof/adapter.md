@@ -26,7 +26,7 @@ title: Adapter
   }
 ```
 
-!!! Codigo fonte
+!!! "Codigo Fonte"
 
     === "Cliente.java"
 
@@ -104,17 +104,18 @@ title: Adapter
   CodigoExistente <|--  ClasseAdapter : herda
 ```
 
-
-```java
-// Implementa Alvo (Target) e HERDA CodigoExistente (Adaptee)
-public class AdaptadorClasse extends CodigoExistente implements Alvo {
-    @Override
-    public void metodo() {
-        // traduz a chamada esperada pelo cliente → para o método do adaptee
-        super.metodoUtil();
+!!! "Codigo Fonte"
+    === "AdaptadorClasse.java"
+    ```java
+    // Implementa Alvo (Target) e HERDA CodigoExistente (Adaptee)
+    public class AdaptadorClasse extends CodigoExistente implements Alvo {
+        @Override
+        public void metodo() {
+            // traduz a chamada esperada pelo cliente → para o método do adaptee
+            super.metodoUtil();
+        }
     }
-}
-```
+    ```
 
 
 
@@ -147,45 +148,47 @@ public class AdaptadorClasse extends CodigoExistente implements Alvo {
   CodigoExistente --*  ObjectAdapter : tem
 ```
 
-```java
-
-// Implementa Alvo (Target) e COMPÕE CodigoExistente (Adaptee)
-public class AdaptadorObjeto implements Alvo {
-    private final CodigoExistente adaptee;
-
-    public AdaptadorObjeto(CodigoExistente adaptee) {
-        this.adaptee = adaptee;
-    }
-
-    @Override
-    public void metodo() {
-        // delega/traduz para o adaptee
-        adaptee.metodoUtil();
-    }
-}
-
-```
 
 
-```java
+!!! "Codigo Fonte"
+    === "AdaptadorObjeto.java"
+        ```java
+        // Implementa Alvo (Target) e COMPÕE CodigoExistente (Adaptee)
+        public class AdaptadorObjeto implements Alvo {
+            private final CodigoExistente adaptee;
 
-public class Demo {
-    public static void main(String[] args) {
+            public AdaptadorObjeto(CodigoExistente adaptee) {
+                this.adaptee = adaptee;
+            }
 
-        // Usando o CLASS ADAPTER (herança)
-        Alvo a1 = new AdaptadorClasse();
-        Cliente cliente1 = new Cliente(a1);
-        cliente1.executar();
+            @Override
+            public void metodo() {
+                // delega/traduz para o adaptee
+                adaptee.metodoUtil();
+            }
+        }
 
-        // Usando o OBJECT ADAPTER (composição)
-        Alvo a2 = new AdaptadorObjeto(new CodigoExistente());
-        Cliente cliente2 = new Cliente(a2);
-        cliente2.executar();
-    }
-}
+        ```
 
 
-```
+!!! "Codigo Fonte"
+    === "Demo.java"
+        ```java
+        public class Demo {
+            public static void main(String[] args) {
+
+                // Usando o CLASS ADAPTER (herança)
+                Alvo a1 = new AdaptadorClasse();
+                Cliente cliente1 = new Cliente(a1);
+                cliente1.executar();
+
+                // Usando o OBJECT ADAPTER (composição)
+                Alvo a2 = new AdaptadorObjeto(new CodigoExistente());
+                Cliente cliente2 = new Cliente(a2);
+                cliente2.executar();
+            }
+        }
+        ```
 
 ---
 
@@ -225,44 +228,48 @@ public class Demo {
   ViaCepService --> EnderecoViaCep
 ```
 
-```java
-
-public class CepControler {
-    private final ServicoCep servico;
-
-    public Cliente(ServicoCep servico) {
-        this.servico = servico;
+!!! "Codigo Fonte"
+    === "CepControler.java"
+    ```java
+        public class CepControler {
+            private final ServicoCep servico;
+            public Cliente(ServicoCep servico) {
+                this.servico = servico;
+            }
+            public Endereco executar() {
+                // o cliente só conhece a INTERFACE Alvo
+                return servico.obterEndereco(41740090);
+            }
+        }
+    ```
+    === "ServicoCep.java"
+    ```java
+    public interface ServicoCep {
+        Endereco obterEndereco(String cep);
     }
-
-    public Endereco executar() {
-        // o cliente só conhece a INTERFACE Alvo
-        return servico.obterEndereco(41740090);
+    ```
+    === "Endereco.java"
+    ```java
+    public interface Endereco {
+        public String getLogradouro();
     }
-}
-
-public interface ServicoCep {
-    Endereco obterEndereco(String cep);
-}
-
-public interface Endereco {
-    public String getLogradouro();
-}
-
-public class ViaCepService {
-    public ViaCepEndereco lookup(String cep() {
-        System.out.println("codigo para Obter Cep");
-    }
-}
-
-public class ViaCepEndereco { 
-    //dados de Endereco
-    public String getRua(){
-
-    }
-}
-
-```
-
+    ```
+    === "ViaCepService.java"
+        ```java
+        public class ViaCepService {
+            public ViaCepEndereco lookup(String cep) {
+                System.out.println("codigo para Obter Cep");
+            }
+        }
+        ```
+    === "ViaCepEndereco.java"
+        ```java
+        public class ViaCepEndereco {
+            //dados de Endereco
+            public String getRua(){
+            }
+        }
+        ```
 
 ## Solução
 
