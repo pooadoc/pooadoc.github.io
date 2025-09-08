@@ -20,8 +20,8 @@ CH: 60h
 Professor: **Mario Jorge Pereira**
 
 - Site pessoal: [mariojp.com.br](https://mariojp.com.br)
-- GitHub: [github.com/mariojp](https://github.com/mariojp)  
 - Página da disciplina: [pooadoc.github.io](https://pooadoc.github.io)
+- Repositórios da disciplina: [github.com/pooadoc](https://github.com/orgs/pooadoc/repositories)
 
 ## Aula 1
 
@@ -34,5 +34,3 @@ Introdução ao SOLID, SRP, OCP e LSP.
 ## Aula 3
 
 Introdução ao SOLID, ISP e DIP.
-
-
