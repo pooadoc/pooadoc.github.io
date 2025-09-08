@@ -110,3 +110,5 @@ nav:
     - Tomcat: guias/tomcat.md
 #    - Maven: guias/tomcat.md
 #    - JUnit: guias/tomcat.md
+extra_css:
+  - css/extra.css

@@ -61,7 +61,7 @@ Os padrões são classificados **por propósito** e **por escopo**:
 |------------------|----------------------|------------------------------------------------------------------------|
 | **Criação**      | Factory Method       | Abstract Factory, Builder, Prototype, Singleton                        |
 | **Estrutura**    | Class Adapter        | Object Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy |
-| **Comportamento**| Template Method      | Interpreter, Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Visitor |
+| **Comportamento**| Interpreter, Template Method      | Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Visitor |
 
 Fonte: Gamma et al., *Design Patterns (1994)
 
@@ -74,6 +74,7 @@ Fonte: Gamma et al., *Design Patterns (1994)
 
 - [Adapter](adapter.md)
 - [Composite](composite.md)
+
 - (Outros padrões podem ser adicionados conforme avançarmos no curso.)
 
 ---
