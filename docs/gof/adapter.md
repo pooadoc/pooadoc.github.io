@@ -26,7 +26,7 @@ title: Adapter
   }
 ```
 
-!!! "Codigo Fonte"
+!!! "Codigo Fonte Problema"
 
     === "Cliente.java"
 
@@ -97,7 +97,7 @@ title: Adapter
   CodigoExistente <|--  ClasseAdapter : herda
 ```
 
-!!! "Codigo Fonte"
+!!! "Codigo Fonte Adaptador Classe"
 
     === "AdaptadorClasse.java"
 
@@ -145,7 +145,7 @@ title: Adapter
 
 
 
-!!! "Codigo Fonte"
+!!! "Codigo Fonte Adaptador Objeto"
     === "AdaptadorObjeto.java"
         ```java
         // Implementa Alvo (Target) e COMPÕE CodigoExistente (Adaptee)
