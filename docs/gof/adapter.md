@@ -225,8 +225,7 @@ title: Adapter
 
 !!! note "Codigo Fonte"
 
-    ==="CepControler.java"
-
+    === "CepControler.java"
         ```java
         public class CepControler {
             private final ServicoCep servico;
@@ -332,6 +331,7 @@ title: Adapter
 ```
 
 !!! note "Codigo Fonte"
+
     === "ViaCepAdapter.java"
     ```java
     public class ViaCepAdapter extends ViaCepService implements ServicoCep {
@@ -341,6 +341,7 @@ title: Adapter
         }
     }
     ```
+
     === "ViaCepAdapter.java"
     ```java
     public class EnderecoAdapter implements Endereco {
