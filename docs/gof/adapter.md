@@ -97,7 +97,7 @@ title: Adapter
   CodigoExistente <|--  ClasseAdapter : herda
 ```
 
-!!! "Codigo Fonte Adaptador Classe"
+!!! note "Codigo Fonte Adaptador Classe"
 
     === "AdaptadorClasse.java"
 
@@ -145,7 +145,7 @@ title: Adapter
 
 
 
-!!! "Codigo Fonte Adaptador Objeto"
+!!! note "Codigo Fonte Adaptador Objeto"
     === "AdaptadorObjeto.java"
         ```java
         // Implementa Alvo (Target) e COMPÕE CodigoExistente (Adaptee)
@@ -166,7 +166,7 @@ title: Adapter
         ```
 
 
-!!! "Codigo Fonte"
+!!! note "Codigo Fonte"
     === "Demo.java"
         ```java
         public class Demo {
@@ -223,7 +223,7 @@ title: Adapter
   ViaCepService --> EnderecoViaCep
 ```
 
-!!! "Codigo Fonte Adapter Problema"
+!!! note "Codigo Fonte Adapter Problema"
 
     ==="CepControler.java"
 
