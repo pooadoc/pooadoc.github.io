@@ -26,49 +26,49 @@ title: Adapter
   }
 ```
 
-### Codigo fonte
+!!! Codigo fonte
 
-=== "Cliente.java"
+    === "Cliente.java"
 
-    ```java title="Cliente.java"
+        ```java title="Cliente.java"
 
-    public class Cliente {
-        private final Alvo alvo;
+        public class Cliente {
+            private final Alvo alvo;
 
-        public Cliente(Alvo a) {
-            this.alvo = a;
+            public Cliente(Alvo a) {
+                this.alvo = a;
+            }
+
+            public void executar() {
+                // o cliente só conhece a INTERFACE Alvo
+                alvo.metodo();
+            }
         }
 
-        public void executar() {
-            // o cliente só conhece a INTERFACE Alvo
-            alvo.metodo();
+        ```
+
+    === "Alvo.java"
+
+        ```java title="Alvo.java"
+
+        public interface Alvo {
+            void metodo();
         }
-    }
 
-    ```
-
-=== "Alvo.java"
-
-    ```java title="Alvo.java"
-
-    public interface Alvo {
-        void metodo();
-    }
-
-    ```
+        ```
 
 
-=== "CodigoExistente.java"
+    === "CodigoExistente.java"
 
-    ```java title="CodigoExistente.java"
+        ```java title="CodigoExistente.java"
 
-    public class CodigoExistente {
-        public void metodoUtil() {
-            System.out.println("[CodigoExistente] fazendo o trabalho útil...");
+        public class CodigoExistente {
+            public void metodoUtil() {
+                System.out.println("[CodigoExistente] fazendo o trabalho útil...");
+            }
         }
-    }
 
-    ```
+        ```
 
 - Como **reusar** o código existente (legado/terceiros) **sem alterar** seu contrato, nem quebrar o cliente?
 
