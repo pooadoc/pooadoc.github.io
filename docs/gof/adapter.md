@@ -31,7 +31,6 @@ title: Adapter
     === "Cliente.java"
 
         ```java title="Cliente.java"
-
         public class Cliente {
             private final Alvo alvo;
 
@@ -44,30 +43,24 @@ title: Adapter
                 alvo.metodo();
             }
         }
-
         ```
 
     === "Alvo.java"
 
         ```java title="Alvo.java"
-
         public interface Alvo {
             void metodo();
         }
-
         ```
-
 
     === "CodigoExistente.java"
 
         ```java title="CodigoExistente.java"
-
         public class CodigoExistente {
             public void metodoUtil() {
                 System.out.println("[CodigoExistente] fazendo o trabalho útil...");
             }
         }
-
         ```
 
 - Como **reusar** o código existente (legado/terceiros) **sem alterar** seu contrato, nem quebrar o cliente?
@@ -105,7 +98,9 @@ title: Adapter
 ```
 
 !!! "Codigo Fonte"
+
     === "AdaptadorClasse.java"
+
     ```java
     // Implementa Alvo (Target) e HERDA CodigoExistente (Adaptee)
     public class AdaptadorClasse extends CodigoExistente implements Alvo {
@@ -228,11 +223,11 @@ title: Adapter
   ViaCepService --> EnderecoViaCep
 ```
 
-!!! "Codigo Fonte"
+!!! "Codigo Fonte Adapter Problema"
 
     ==="CepControler.java"
 
-    ```java
+        ```java
         public class CepControler {
             private final ServicoCep servico;
             public Cliente(ServicoCep servico) {
@@ -243,23 +238,24 @@ title: Adapter
                 return servico.obterEndereco(41740090);
             }
         }
-    ```
+        ```
 
     === "ServicoCep.java"
 
-    ```java
-    public interface ServicoCep {
-        Endereco obterEndereco(String cep);
-    }
-    ```
+        ```java
+        public interface ServicoCep {
+            Endereco obterEndereco(String cep);
+        }
+        ```
 
     === "Endereco.java"
 
-    ```java
-    public interface Endereco {
-        public String getLogradouro();
-    }
-    ```
+        ```java
+        public interface Endereco {
+            public String getLogradouro();
+        }
+        ```
+
     === "ViaCepService.java"
 
         ```java
