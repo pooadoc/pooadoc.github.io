@@ -86,7 +86,7 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-#      alternate_style: true
+      alternate_style: true
   - meta
 
 copyright: >
