@@ -342,7 +342,7 @@ title: Adapter
     }
     ```
 
-    === "ViaCepAdapter.java"
+    === "EnderecoAdapter.java"
     ```java
     public class EnderecoAdapter implements Endereco {
         private EnderecoViaCep enderecoViaCep;
