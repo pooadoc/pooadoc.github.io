@@ -26,7 +26,7 @@ title: Adapter
   }
 ```
 
-!!! note "Codigo Fonte Problema"
+!!! note "Codigo Fonte"
 
     === "Cliente.java"
 
