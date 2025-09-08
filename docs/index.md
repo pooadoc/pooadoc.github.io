@@ -8,12 +8,12 @@ CH: 60h
 
 **Bem-vindo a disciplina!**
 
-## Objetivos da disciplina
+!!! "Objetivos da disciplina"
 
-- POO em Java (classes, interfaces, herança, polimorfismo) e qualidade de código.  
-- Dominar **SOLID** (SRP/OCP/LSP/ISP/DIP) e **Padrões GoF**.  
-- Praticar **JDBC** **Threads**, **Coleções**.  
-- Introduzir **Metaprogramação** (Reflexão + Anotações)
+    - POO em Java (classes, interfaces, herança, polimorfismo) e qualidade de código.  
+    - Dominar **SOLID** (SRP/OCP/LSP/ISP/DIP) e **Padrões GoF**.  
+    - Praticar **JDBC** **Threads**, **Coleções**.  
+    - Introduzir **Metaprogramação** (Reflexão + Anotações)
 
 ## Referência do Professor
 
