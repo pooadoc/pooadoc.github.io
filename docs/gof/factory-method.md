@@ -10,7 +10,7 @@ title: Factory Method
 
 - O acesso a um objeto concreto será feito **através da interface conhecida pela superclasse**.  
 - Porém, o cliente **não quer (ou não pode) conhecer** qual implementação concreta está sendo usada.  
-- Como criar objetos **sem acoplar** o código cliente às classes concretas?:contentReference[oaicite:2]{index=2}
+- Como criar objetos **sem acoplar** o código cliente às classes concretas
 
 ---
 
@@ -19,7 +19,7 @@ title: Factory Method
 - O Factory Method define uma **interface comum** para criar objetos.  
 - As subclasses do criador determinam **qual classe concreta** será instanciada.  
 - O cliente chama o método de criação da superclasse sem precisar conhecer os concretos.  
-- Assim, o conhecimento das classes concretas **fica encapsulado** no criador, e não no cliente.:contentReference[oaicite:3]{index=3}
+- Assim, o conhecimento das classes concretas **fica encapsulado** no criador, e não no cliente.
 
 ---
 
