@@ -17,18 +17,18 @@ Este documento/página orienta a comunidade acadêmica sobre **como registrar e 
 
 ## 2. Tipos de registros
 
-### 📍 Fotos amplas (auditórios, turmas, multidão)
+### Fotos amplas (auditórios, turmas, multidão)
 - Podem ser feitas para fins de registro institucional.  
 - Evitar closes que identifiquem claramente indivíduos.  
 - Sempre informar previamente que haverá cobertura fotográfica.
 (STJ, REsp 1.772.593/RS — fotos em multidão sem individualização reduzem risco)
 
-### 📍 Fotos posadas (grupos, equipes, pódio)
+### Fotos posadas (grupos, equipes, pódio)
 - Só com **consentimento prévio**. (LGPD, art. 7º, I; CC, art. 20)
 - Para menores de 18 anos, é necessário o **termo assinado pelo responsável**. (LGPD, art. 14; ECA, art. 17)
 - Professores devem pedir autorização antes de postar em redes sociais.  
 
-### 📍 Fotos individuais (retratos, close, premiação)
+### Fotos individuais (retratos, close, premiação)
 - Requerem **autorização expressa** (maiores de idade) ou dos **responsáveis legais** (menores).  
 - Não publicar em materiais de divulgação sem consentimento. (Súmula 403/STJ — uso comercial sem autorização presume dano moral)
 
@@ -66,11 +66,11 @@ Este documento/página orienta a comunidade acadêmica sobre **como registrar e 
 
 ## 6. Boas práticas
 
-- 📝 Ter um **termo de autorização de imagem** no ato da inscrição do evento.  
-- 🔔 Avisar sempre que haverá fotógrafos (“Ambiente sob cobertura fotográfica”).  
-- 🎭 Respeitar quem **não quer aparecer** (pulseira, crachá ou aviso visual).  
-- ✂️ Editar/blur para proteger identidade quando necessário.  
-- 🗂️ Guardar os termos de consentimento junto ao processo do evento.  
+- Ter um **termo de autorização de imagem** no ato da inscrição do evento.  
+- Avisar sempre que haverá fotógrafos (“Ambiente sob cobertura fotográfica”).  
+- Respeitar quem **não quer aparecer** (pulseira, crachá ou aviso visual).  
+- Editar/blur para proteger identidade quando necessário.  
+- Guardar os termos de consentimento junto ao processo do evento.  
 
 ---
 
