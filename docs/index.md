@@ -22,5 +22,3 @@ Professor: **Mario Jorge Pereira**
 - Site pessoal: [mariojp.com.br](https://mariojp.com.br)
 - Página da disciplina: [pooadoc.github.io](https://pooadoc.github.io)
 - Repositórios da disciplina: [github.com/pooadoc](https://github.com/orgs/pooadoc/repositories)
-
-
