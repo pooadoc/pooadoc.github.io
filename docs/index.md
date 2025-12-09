@@ -1,24 +1,16 @@
 ---
-title: POOA - Programação Orientada a Objetos
+title: Fábrica de Software Acadêmica — UCSAL
 ---
 
-_UCSAL_
-Escola de Tecnologias
-CH: 60h
+A **Fábrica de Software Acadêmica da UCSAL — Universidade Católica do Salvador** é um espaço colaborativo dedicado ao desenvolvimento de projetos, práticas de engenharia de software e produção de conhecimento tecnológico. 
 
-**Bem-vindo a disciplina!**
+Este site funciona como **repositório oficial da Fábrica**, reunindo:
 
-!!! note "Objetivos da disciplina"
+- 📄 Documentações gerais dos projetos  
+- 🧭 Documentação da metodologia de trabalho  
+- ✍️ Publicações autorais e materiais de referência produzidos por alunos e professores  
 
-    - POO em Java (classes, interfaces, herança, polimorfismo) e qualidade de código.  
-    - Dominar **SOLID** (SRP/OCP/LSP/ISP/DIP) e **Padrões GoF**.  
-    - Praticar **JDBC** **Threads**, **Coleções**.  
-    - Introduzir **Metaprogramação** (Reflexão + Anotações)
+A Fábrica promove um ambiente de aprendizagem prática, multidisciplinar e guiada por desafios reais, respeitando o contexto acadêmico: sem dedicação exclusiva, sem bolsas e com orientação limitada dos docentes. Cada entrega é uma oportunidade de criar, aprender e evoluir.
 
-## Referência do Professor
-
-Professor: **Mario Jorge Pereira**
-
-- Site pessoal: [mariojp.com.br](https://mariojp.com.br)
-- Página da disciplina: [pooadoc.github.io](https://pooadoc.github.io)
-- Repositórios da disciplina: [github.com/pooadoc](https://github.com/orgs/pooadoc/repositories)
+Bem-vindo(a) ao repositório digital da Fábrica de Software Acadêmica da UCSAL.  
+**Conhecimento organizado, acessível e construído em equipe.**
