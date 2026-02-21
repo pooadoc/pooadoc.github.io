@@ -1,8 +1,8 @@
 ---
-title: Revisão: Orientação a Objetos
+title: Revisão Programação Orientada a Objetos
 ---
 ```slides
-title: Aula 01 — Orintação a Objetos
+title: Revisão Programação Orientada a Objetos
 url_stub: aula01
 nav:
   - slides/aula01/01-inicio.md
