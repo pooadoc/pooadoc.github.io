@@ -1,3 +1,4 @@
 mkdocs>=1.5
 mkdocs-material[imaging]>=9.6,<10
 mkdocs-minify-plugin
+mkslides
