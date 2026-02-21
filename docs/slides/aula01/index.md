@@ -1,5 +1,8 @@
+---
+title: Aula 01 — Orintação a Objetos
+---
 ```slides
-title: Aula 01 — OO como Engenharia
+title: Aula 01 — Orintação a Objetos
 url_stub: aula01
 nav:
   - slides/aula01/01-inicio.md
