@@ -1,7 +1,3 @@
-
-### `docs/slides/aula01/01-abertura.md`
-
-```markdown
 # Aula 01 — OO como Engenharia de Sistemas
 ## Revisão estrutural (para quem já “viu OO”)
 
